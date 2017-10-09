@@ -12,8 +12,8 @@ public class TestMain {
 		// TODO Auto-generated method stub
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
 		
-		Card card = appContext.getBean("card1", Card.class);
-		card.read();
+//		Card card = appContext.getBean("card1", Card.class);
+//		card.read();
 		
 		Atm atm = appContext.getBean("atm", Atm.class);
 		atm.read();
