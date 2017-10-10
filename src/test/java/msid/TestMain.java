@@ -16,7 +16,7 @@ public class TestMain {
 //		card.read();
 		
 		Atm atm = appContext.getBean("atm", Atm.class);
-		atm.read();
+		atm.print();
 	}
 
 }

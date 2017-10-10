@@ -4,10 +4,14 @@
 		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 		
 		<!-- 声明card1,card2等，交给spring创建 -->
-		<bean name="card1" class="com.hao.msid.Card1"> </bean>
-		<bean name="card2" class="com.hao.msid.Card2"> </bean>
-		<!-- 声明 atm，交给spring创建，并注入Cards对象（需要set方法）-->
-		<bean name="atm" class="com.hao.msid.Atm">
+		<bean name="card1" class="com.hao.msid.Card1">
+			<property name="sb" value="this is card1" />
+		</bean>
+		<bean name="card2" class="com.hao.msid.Card2">
+			<property name="sb" value="this is card2" />
+		</bean>
+		<!-- 声明 atm，交给spring创建，并注入Card对象（需要set方法）-->
+		<bean name="atm" class="com.hao.msid.Atm" scope="prototype">
 			<property name="card" ref="card2" />
 		</bean>
 </beans>

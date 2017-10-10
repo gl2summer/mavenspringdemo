@@ -18,9 +18,9 @@ public class Atm {
 		return this.card;
 	}
 	
-	public void read() {
+	public void print() {
 		if(card != null) {
-			card.read();
+			card.print();
 		}
 	}
 }
